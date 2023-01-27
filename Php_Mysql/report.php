@@ -17,19 +17,15 @@ $fang_spotted = $_POST['fangspotted'];
 $email = $_POST['email'];
 $other = $_POST['other'];
 
-// Bloco de Envio de E-mail 
+// Bloco de Query
+$dbc = mysql_connect('localhost', 'alien', '123456', aliendatabase) or die('Erro ao tentar conectar o Mysql Server');
 
-$to = 'd7m7e7@gmail.com';
-$subject = 'Aliens me abduziram -  Relator de Abdução';
-$msg =  "$name foi sequestrado $when_it_happened e foi embora para $how_long.\n" .
-"Número de alienígenas: $how_many\n" .
-"descrição alienígena: $alien_description\n" .
-"O que eles fizeram: $what_they_did\n" .
-"Virão o Fang: $fang_spotted\n" .
-"Other comments: $other";
-  
-mail($to, $subject, $msg, 'from:' . $email);
-  
+$quere ="INSERT INTO aliens_abduction (first_name, last_name, when_it_happened,how_long,  " . 
+"how_many, alien_description, what_they_did, fang_spotted, other, email)  ".
+"VALUES ('$firstname', '$last_name', '$when_it_happened', '$how_long', '$how_many', " ,  "'$alien_description', '$what_they_did', '$fang_spotted', '$other', $email')";
+$result = mysqli_query($dbc, $quere) or die('Erro de queryng database.');
+mysqli_close($dbc);
+
 
 echo 'obrigado por enviar o formulário.<br/>';
 echo 'você foi sequestrado '. $when_it_happened .'<br/>';
