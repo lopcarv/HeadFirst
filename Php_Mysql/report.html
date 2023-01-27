@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Alienígenas me abduziram - relatar uma abdução</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <h2>Alienígenas me abduziram - relatar uma abdução</h2>
+
+  <p>Compartilhe sua história de abdução alienígena:</p>
+  <form action = "report.php" method="post">
+    <label for="firstname">Primeiro Nome:</label>
+    <input type="text" id="firstname" name="firstname" /><br />
+    <label for="lastname">Ultimo Nome:</label>
+    <input type="text" id="lastname" name="lastname" /><br />
+    <label for="email">Qual o seu email?</label>
+    <input type="text" id="email" name="email" /><br />
+    <label for="whenithappened">Quando isso aconteceu?</label>
+    <input type="text" id="whenithappened" name="whenithappened" /><br />
+    <label for="howlong">quanto tempo você se foi?</label>
+    <input type="text" id="howlong" name="howlong" /><br />
+    <label for="howmany">Quantos você viu ?</label>
+    <input type="text" id="howmany" name="howmany" /><br />
+    <label for="aliendescription">Descreva-os:</label>
+    <input type="text" id="aliendescription" name="aliendescription" size="32" /><br />
+    <label for="whattheydid">O que eles fizeram com você?</label>
+    <input type="text" id="whattheydid" name="whattheydid" size="32" /><br />
+    <label for="fangspotted">Você viu meu cachorro Fang ?</label>
+    Sim <input id="fangspotted" name="fangspotted" type="radio" value="yes" />
+    Não <input id="fangspotted" name="fangspotted" type="radio" value="no" /><br />
+    <img src="fang.png" width="100" height="175"
+      alt="My abducted dog Fang." /><br />
+    <label for="other">Qualquer outra coisa que você queira adicionar ?</label>
+    <textarea id="other" name="other"></textarea><br />
+    <input type="submit" value="Report Abduction" name="submit" />
+  </form>
+</body>
+</html>
